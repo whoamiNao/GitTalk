@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Fondo vistoso más grande */
+body {
+    background: linear-gradient(135deg, #6c63ff, #4ec5ff, #41f0b0);
+    background-size: 300% 300%;
+    animation: fondo 10s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Animación para el fondo */
+@keyframes fondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card {
+    background: #ffffffdd;
+    backdrop-filter: blur(8px);
+    width: 90%;
+    max-width: 800px;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 35px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: aparecer 1s ease;
+}
+
+/* Animación de entrada */
+@keyframes aparecer {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.card h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.card h1 i {
+    margin-right: 10px;
+    color: #6c63ff;
+}
+
+/* Información */
+.info p {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.info span {
+    font-weight: bold;
+    color: #222;
+}
+
+/* Iconos */
+.info i {
+    font-size: 1.7rem;
+    color: #6c63ff;
+    animation: latido 2s infinite;
+}
+
+/* Animación de iconos */
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
